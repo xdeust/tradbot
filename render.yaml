@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tradbot-pro
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run.py
+    envVars:
+      - key: PORT
+        value: 8000
