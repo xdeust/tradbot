@@ -4,12 +4,19 @@ Tüm API uç noktalarını, statik dosya sunucusunu ve asenkron arka plan taray�
 """
 
 import os
+import sys
 import time
 import math
 import asyncio
 import datetime
 import pandas as pd
 import numpy as np
+
+# Proje ana dizinini her zaman Python path'ine ekle (Render Linux uyumluluğu için)
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+if CURRENT_DIR not in sys.path:
+    sys.path.insert(0, CURRENT_DIR)
+
 from contextlib import asynccontextmanager
 from typing import Optional, List, Dict, Any
 
