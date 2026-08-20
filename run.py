@@ -10,8 +10,8 @@ import uvicorn
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     print(f"\n=======================================================")
-    print(f"🚀 TRADBOT PRO | FINTECH TERMINAL BAŞLATILIYOR...")
-    print(f"📡 Sunucu Adresi: http://localhost:{port}")
-    print(f"📖 API Dokümantasyonu: http://localhost:{port}/docs")
+    print(f"TRADBOT PRO | FINTECH TERMINAL BASLATILIYOR...")
+    print(f"Sunucu Adresi: http://0.0.0.0:{port}")
+    print(f"API Dokumantasyonu: http://0.0.0.0:{port}/docs")
     print(f"=======================================================\n")
-    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)

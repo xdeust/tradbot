@@ -44,6 +44,8 @@ def sanitize_json(data: Any) -> Any:
 # Arka plan tarama görevi
 async def background_scanner_loop():
     """BIST hisselerini periyodik olarak tarayarak önbelleği güncel tutar"""
+    # Sunucu hemen açılsın ve port kontrolünü (Render health check) 1 saniyede geçsin diye ilk taramayı 3 sn sonra başlat
+    await asyncio.sleep(3)
     while True:
         try:
             cache.set("is_scanning", True)
